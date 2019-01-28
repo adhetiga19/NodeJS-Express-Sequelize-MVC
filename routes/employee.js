@@ -6,7 +6,13 @@ var job = require('../models/job');
 
 // LIST
 router.get('/', (req, res) =>
-  employee.findAll()
+  employee.findAll({
+    include: [
+      {
+        model: job //including job table into employeeList
+      }
+    ]
+  })
     .then(employeeList => {
       res.render('admin/employeeList', {
         employeeList
