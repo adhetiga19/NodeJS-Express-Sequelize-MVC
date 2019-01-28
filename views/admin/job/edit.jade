@@ -1,0 +1,21 @@
+html
+ head
+  title Job
+ body 
+  br
+  h3 Edit Job
+  form(method="post", action="/job/edit") 
+   table
+    tr
+      th ID:
+      td
+       input(type="text", name="job_id", value=jobEdit.job_id, required, readonly)
+    tr
+      th Job Title:
+      td
+       input(type="text", name="job_title", value=jobEdit.job_title, required)
+    tr
+      th &nbsp;
+      td
+       input(type="submit", value="Save")    
+

@@ -1,0 +1,29 @@
+html
+  head
+    title Employee
+  body 
+    br
+    h3 Edit Employee
+    form(method="post", action="/employee/edit") 
+      table
+        tr
+          th ID:
+          td
+            input(type="text", name="id", value=empEdit.id, required, readonly)
+        tr
+          th Name:
+          td
+            input(type="text", name="name", value=empEdit.name, required)
+        tr
+          th Email:
+          td
+            input(type="text", name="email", value=empEdit.email, required)
+        tr
+          th Job:
+          td
+            input(type="text", name="job_id", value=empEdit.job_id, required)
+        tr
+          th &nbsp;
+          td
+            input(type="submit", value="Save")    
+

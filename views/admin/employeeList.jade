@@ -1,0 +1,28 @@
+extends layout
+ 
+block head
+  title Employee
+block content
+  h3(align="center") Employee Table
+  div(class="row")
+    div(class="add-button col-md-2" align="right")
+     p
+      a(class="btn btn-info btn-sm" href="/employee/add") Add
+   table(class="table table-hover" style="width:60%;" align="center")
+    tr(class="table-primary")
+      th NIK
+      th Name
+      th Email
+      th Job
+      th Action
+    each emp in employeeList
+      tr
+        td #{emp.id}
+        td #{emp.name}
+        td #{emp.email}
+        td #{emp.job_id}
+        td 
+          a(href="/employee/edit/" + emp.id) Edit 
+          a(type="text") | 
+          a(href="/employee/delete/" + emp.id,
+            onclick="return confirm('Are you sure?')") Delete

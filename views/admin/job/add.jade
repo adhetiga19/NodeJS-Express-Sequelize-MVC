@@ -1,0 +1,20 @@
+html
+ head
+  title Job
+ body 
+  br
+  h3 Add Job
+  form(method="post", action="/job/add") 
+   table
+    tr
+      th ID:
+      td
+       input(type="text", name="job_id", required)
+    tr
+      th Job Title:
+      td
+       input(type="text", name="job_title", required)
+    tr
+      th &nbsp;
+      td
+       input(type="submit", value="Save")    

@@ -1,0 +1,30 @@
+html
+  head
+    title Employee 
+  body 
+    br
+    h3 Add Employee
+    form(method="post", action="/employee/add") 
+      table
+        tr
+          th ID:
+          td
+            input(type="text", name="id", required)
+        tr
+          th Name:
+          td
+            input(type="text", name="name", required)
+        tr
+          th Email:
+          td
+            input(type="text", name="email", required)
+        tr
+          th Job:
+          td
+            select(type="text", name="job_id", required)
+              for job in jobList
+                option #{job.job_id}
+        tr
+          th &nbsp;
+          td
+            input(type="submit", value="Save")    
