@@ -1,4 +1,4 @@
-var Sequelize = require('sequelize'); // library for mapping
+var Sequelize = require('sequelize'); // library for mapping models
 
 module.exports = new Sequelize('nodejs_test', '', '', {
   host: 'localhost',
